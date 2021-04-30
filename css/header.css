@@ -51,7 +51,7 @@
   min-width: 250px;
 }
 
-.navigation__links {
+/* .navigation__links {
   margin: 20px;
   padding: 15px;
   font-family: "Montserrat", sans-serif;
@@ -59,7 +59,7 @@
   text-decoration: none;
   color: black;
   font-weight: bolder;
-}
+} */
 .navigation__links:hover {
   color: rgb(158, 158, 158);
 }
