@@ -1,0 +1,18 @@
+.list {
+    list-style-type: square;
+    list-style-position: inside;
+    text-align: justify;
+    overflow-x: auto;
+  }
+  .list__margin {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  .list__ordered {
+    margin-left: 14px;
+    margin-right: 14px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    text-align: justify;
+  }
+  
