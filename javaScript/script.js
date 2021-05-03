@@ -18,16 +18,16 @@ let language = document.querySelector(".js-brightAndLanguage__flag");
 
 console.log(text);
 
-// moonSunButton.addEventListener("click", () => {
-//   body.classList.toggle("body--dark");
-//   imgMain.classList.toggle("imgMain--bright");
-//   aboutMe.classList.toggle("aboutMe--colorWhite");
-//   if (moonSunElement.src === sunImage) {
-//     moonSunElement.src = moonImage;
-//   } else {
-//     moonSunElement.src = sunImage;
-//   }
-// });
+moonSunButton.addEventListener("click", () => {
+  body.classList.toggle("body--dark");
+  imgMain.classList.toggle("imgMain--bright");
+  aboutMe.classList.toggle("aboutMe--colorWhite");
+  if (moonSunElement.src === sunImage) {
+    moonSunElement.src = moonImage;
+  } else {
+    moonSunElement.src = sunImage;
+  }
+});
 
 langChange.addEventListener("click", () => {
   if (language.src === polishFlag) {
