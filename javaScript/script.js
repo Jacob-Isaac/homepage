@@ -1,5 +1,5 @@
 let text =
-  "Wójek dobra rada: Jeśli późno wstaniesz, to możesz odrazu zjeść obiad i nie musisz robić śniadania";
+  "Wujek dobra rada: Jeśli późno wstaniesz, to możesz odrazu zjeść obiad i nie musisz robić śniadania";
 let imageOne = "https://i.imgur.com/2ugcFV4.jpg";
 let imageSecond = "https://i.imgur.com/rGFCAyO.png";
 let sunImage = "https://i.imgur.com/mIGokM3.png";
