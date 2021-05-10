@@ -1,7 +1,14 @@
 # homepage
-Oto moja pierwsza strona internetowa (nie licząc tych które robiłem jeszcze w podstawówce na informatyce):)
+This is my first website (not counting those that I did in elementary school in computer science class) :)
 
-[MOJA PIERWSZA STRONA](https://jacob-isaac.github.io/homepage/)<br><br>
-to ja: <br>![Mój obrazek](https://i.imgur.com/JZDQamA.jpg)
+[MY FIRST WEBSITE](https://jacob-isaac.github.io/homepage/)<br><br>
+## That's me: 
+<br><br>![My image](https://i.imgur.com/JZDQamA.jpg)
 
-A tutaj gif ze strony, pokazuje jak ładnie przewija się strona po kliknięciu w nawigacji :D 
+## And here is a gif from the website, shows how nicely the page scrolls after clicking on the navigation :D <br>
+
+![My gif](https://github.com/Jacob-Isaac/homepage/blob/main/Animation.gif)<br>
+
+## Here is fragment of the code, that gave me this effect: <br>
+
+```javascript scroll-behavior: smooth;```
