@@ -7,7 +7,7 @@ This is my first website (not counting those that I did in elementary school in 
 
 ## And here is a gif from the website, shows how nicely the page scrolls after clicking on the navigation :D <br>
 
-![My gif](https://github.com/Jacob-Isaac/homepage/blob/main/Animation.gif)<br>
+![My gif](https://github.com/Jacob-Isaac/homepage/blob/main/images/Animation.gif)<br>
 
 ## Here is fragment of the code, that gave me this effect: <br>
 
