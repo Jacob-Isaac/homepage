@@ -1,38 +1,33 @@
-let text =
-  "Wujek dobra rada: Jeśli późno wstaniesz, to możesz odrazu zjeść obiad i nie musisz robić śniadania";
-let imageOne = "https://i.imgur.com/2ugcFV4.jpg";
-let imageSecond = "https://i.imgur.com/rGFCAyO.png";
-let sunImage = "https://i.imgur.com/mIGokM3.png";
-let moonImage = "https://i.imgur.com/hNtINpm.png";
-let polishFlag = "https://i.imgur.com/O3VfuOn.png";
-let englishFlag = "https://i.imgur.com/wqdZedL.png";
+{
+const imgMain = document.querySelector(".imgMain");
+const aboutMe = document.querySelector(".aboutMe");
+let condition = Boolean(true);
+let conditionFlag = Boolean(true);
 
-let moonSunButton = document.querySelector(".brightAndLanguage__moonSun");
-let langChange = document.querySelector(".brightAndLanguage__flag");
-let imgMain = document.querySelector(".imgMain");
-let body = document.querySelector(".body");
-let moonSunElement = document.querySelector(".js-brightAndLanguage__moonSun");
-let eng = document.querySelector(".eng");
-let aboutMe = document.querySelector(".aboutMe");
-let language = document.querySelector(".js-brightAndLanguage__flag");
+const sunImage = "images/sun.png";
+const moonImage = "images/moon.png";
 
-console.log(text);
 
-moonSunButton.addEventListener("click", () => {
-  body.classList.toggle("body--dark");
-  imgMain.classList.toggle("imgMain--bright");
-  aboutMe.classList.toggle("aboutMe--colorWhite");
-  if (moonSunElement.src === sunImage) {
-    moonSunElement.src = moonImage;
-  } else {
-    moonSunElement.src = sunImage;
-  }
-});
+const moonSunButton = document.querySelector(".brightAndLanguage__moonSun");
+const langChange = document.querySelector(".brightAndLanguage__flag");
 
-langChange.addEventListener("click", () => {
-  if (language.src === polishFlag) {
+const body = document.querySelector(".body");
+const moonSunElement = document.querySelector(".js-brightAndLanguage__moonSun");
+const eng = document.querySelector(".eng");
+
+const imgMainToggle = () => {
+
+  const language = document.querySelector(".js-brightAndLanguage__flag");
+  const ImageJacobFirst = "images/myfoto2.jpg";
+  const ImageError = "images/error.png";
+  const polishFlag = "images/polish.png";
+  const englishFlag = "images/english.png";
+
+  if (conditionFlag===false) {
+    conditionFlag = true;
     language.src = englishFlag;
-  } else {
+  } else if (conditionFlag===true){
+    conditionFlag = false;
     language.src = polishFlag;
   }
 
@@ -43,9 +38,40 @@ langChange.addEventListener("click", () => {
     aboutMe.innerHTML = "O mnie";
   }
 
-  if (imgMain.src === imageOne) {
-    imgMain.src = imageSecond;
-  } else {
-    imgMain.src = imageOne;
+  if (conditionFlag===false) {
+    imgMain.src = ImageError;
+  } else if (conditionFlag===true){
+    imgMain.src = ImageJacobFirst;
   }
+}
+const brightnessToggle = () => {
+  body.classList.toggle("body--dark");
+  imgMain.classList.toggle("imgMain--bright");
+  aboutMe.classList.toggle("aboutMe--colorWhite");
+}
+const moonSunIconToggle = () => {
+  if (condition===false) {
+    condition = true;
+    moonSunElement.src = moonImage;
+  } else if (condition===true) {
+    condition = false;
+    moonSunElement.src = sunImage;
+  }
+}
+const init = () => {
+  const text =
+  "Wujek dobra rada: Jeśli późno wstaniesz, to możesz odrazu zjeść obiad i nie musisz robić śniadania";
+  console.log(text);
+
+  langChange.addEventListener("click", () => {
+  imgMainToggle();
 });
+  moonSunButton.addEventListener("click", () => {
+  brightnessToggle();
+  moonSunIconToggle();
+});
+  
+
+}
+ init();
+}

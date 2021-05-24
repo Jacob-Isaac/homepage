@@ -28,12 +28,12 @@
   margin-top: 10px;
   text-align: right;
 }
-.brightAndLanguage__moonSun:focus {
+/* .brightAndLanguage__moonSun:focus {
   outline: 0.5px ridge rgb(141, 141, 141);
-}
-.brightAndLanguage__moonSun:focus {
+} */
+/* .brightAndLanguage__moonSun:focus {
   outline: 0.5px ridge rgb(141, 141, 141);
-}
+} */
 
 .navigation__order {
   list-style: none;
