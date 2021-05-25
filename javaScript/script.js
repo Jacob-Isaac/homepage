@@ -1,6 +1,4 @@
 {
-  const imgMain = document.querySelector(".imgMain");
-  const aboutMe = document.querySelector(".aboutMe");
   let condition = Boolean(true);
   let conditionFlag = Boolean(true);
 
@@ -17,7 +15,7 @@
       language.src = polishFlag;
     }
   };
-  const imgMainToggle = () => {
+ const imgMainToggle = (imgMain) => {
     const ImageJacobFirst = "images/myfoto2.jpg";
     const ImageError = "images/error.png";
 
@@ -27,7 +25,7 @@
       imgMain.src = ImageJacobFirst;
     }
   };
-  const aboutMeTextToggle = () => {
+  const aboutMeTextToggle = (aboutMe) => {
     if (aboutMe.innerHTML === "O mnie") {
       aboutMe.innerHTML =
         "<b>ERROR 666</b><br>We will provide English version as soon as possible! Sorry for the inconvenience.";
@@ -35,8 +33,9 @@
       aboutMe.innerHTML = "O mnie";
     }
   };
-  const brightnessToggle = () => {
+  const brightnessToggle = (imgMain, aboutMe) => {
     const body = document.querySelector(".body");
+
     aboutMe.classList.toggle("aboutMe--colorWhite");
     body.classList.toggle("body--dark");
     imgMain.classList.toggle("imgMain--bright");
@@ -55,20 +54,19 @@
     }
   };
   const init = () => {
-    const text =
-      "Wujek dobra rada: Jeśli późno wstaniesz, to możesz odrazu zjeść obiad i nie musisz robić śniadania";
-    console.log(text);
-
     const langChange = document.querySelector(".brightAndLanguage__flag");
     const moonSunButton = document.querySelector(".brightAndLanguage__moonSun");
 
+    const imgMain = document.querySelector(".imgMain");
+    const aboutMe = document.querySelector(".aboutMe");
+
     langChange.addEventListener("click", () => {
       flagToggle();
-      imgMainToggle();
-      aboutMeTextToggle();
+      imgMainToggle(imgMain);
+      aboutMeTextToggle(aboutMe);
     });
     moonSunButton.addEventListener("click", () => {
-      brightnessToggle();
+      brightnessToggle(imgMain, aboutMe);
       moonSunIconToggle();
     });
   };
